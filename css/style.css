@@ -36,7 +36,7 @@
     }
    }
    .container{
-    background: url(pexels-christina-morillo-1181332\ \(2\).jpg);
+    background: url(img\Screenshot (93).jpg);
     min-height: 380px;
    }
    .mid{
@@ -109,7 +109,7 @@
   /* Additional CSS for the footer */
   .footer {
     text-align: center;
-    padding: 10px;
+    padding: 100px;
     background-color: #333;
     color: #fff;
   }
