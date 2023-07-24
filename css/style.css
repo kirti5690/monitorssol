@@ -1,0 +1,122 @@
+/* Your existing CSS styles for .header, .navbar, .container, and other elements remain unchanged */
+
+/* Additional CSS for the tutorial section */
+.tutorial {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+  }
+  
+  .tutorial h1 {
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .tutorial h2 {
+    color: #555;
+    font-size: 28px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  
+  .tutorial p {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  @media(max-width:768px){
+    .container{
+       flex-direction: column;
+       align-items: flex-start;
+    }
+   }
+   .container{
+    background: url(pexels-christina-morillo-1181332\ \(2\).jpg);
+    min-height: 380px;
+   }
+   .mid{
+    display: block;
+    margin: 0px auto ;
+    width: 43%;
+    padding: 2px 12px;
+    
+ }
+ .right{
+     position: absolute;
+     right: 34px;
+    top: 20px;
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+ }
+ .navbar{
+    display: inline-block;
+    margin-top: 20px;
+ }
+ .navbar li{
+    display: inline-block;
+    font-size: 15px;
+    margin :0 10px;
+ }
+ .navbar li a{
+    color:  white;
+    font-weight: bold;
+    font-size: larger;
+    text-decoration: none;
+    padding: 34px 23px;
+ }
+ .navbar li a:hover, .navbar li a.active{
+    text-decoration: underline;
+    color:  blueviolet;
+ }
+.btn{
+    margin: 0px 9px;
+    padding: 5px 14px;
+    background-color: black;
+    color: white;
+    border: 2px solid grey;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+  }   
+  
+  .tutorial ul {
+    list-style: disc;
+    margin-left: 30px;
+  }
+  
+  .tutorial li {
+    color: #666;
+    font-size: 18px;
+  }
+  
+  .tutorial pre {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 15px;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.4;
+    overflow-x: auto; /* Enable horizontal scrolling for long code lines */
+    border-radius: 5px;
+  }
+  
+  /* Additional CSS for the footer */
+  .footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  /* Rest of your existing styles remain unchanged */
+  

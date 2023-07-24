@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 30px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Q&A</h1>
+    </header>
+
+    <main>
+        <h2>Common Questions</h2>
+        <ul>
+            <li>
+                <h3>1. How do I reset my password?</h3>
+                <p>If you've forgotten your password, you can click on the "Forgot Password" link on the login page. Follow the instructions to reset your password via email.</p>
+            </li>
+            <li>
+                <h3>2. I'm not receiving the confirmation email after signing up.</h3>
+                <p>Please check your spam or junk folder in your email. If you still don't receive the email, contact our support team at support@example.com.</p>
+            </li>
+            <!-- Add more common questions and answers as needed -->
+        </ul>
+
+        <h2>Technical Issues</h2>
+        <ul>
+            <li>
+                <h3>1. Why am I getting a 404 error?</h3>
+                <p>A 404 error means the page you are trying to access does not exist. Check the URL for any typos or contact the webmaster for assistance.</p>
+            </li>
+            <li>
+                <h3>2. The website is loading slowly. What can I do?</h3>
+                <p>Slow loading times can be due to various factors, including your internet connection and server performance. Try clearing your browser cache or using a faster internet connection.</p>
+            </li>
+            <!-- Add more technical questions and answers as needed -->
+        </ul>
+
+        <h2>Ask a Question</h2>
+        <form action="submit_question.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="question">Your Question:</label>
+            <textarea id="question" name="question" rows="4" cols="50" required></textarea>
+
+            <input type="submit" value="Submit Question">
+        </form>
+    </main>
+</body>
+</html>
+

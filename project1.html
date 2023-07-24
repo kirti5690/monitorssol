@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>btech</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-6J0/s1z0UBQl36ODnM71xdPRGdYSdPPfWc2U8ccR50DpYPVqlBlg+oxbkWomLb94Zlw2pzT6uoxRrcrPeekbA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<link rel="stylesheet" href="css/style.css">
+<style>
+    body{
+      color: grey;
+        margin: 0px;
+        padding: 0px;
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+      
+   
+      }
+      .about-us-section {
+            background-color: #f9f9f9;
+            padding: 30px;
+            text-align: center;
+            margin-top: 50px;
+            border-radius: 10px;
+        }
+
+        /* Additional styles for the "About Us" link in the navbar */
+        .navbar li a[href="#about-us"] {
+            font-weight: bold;
+            color: black;
+        }
+     .left{
+        display: inline-block;
+        position: absolute;
+        left: 0px;
+        right: 10px;
+        width: 10%;
+        padding: 2px ;
+     }
+     .mid{
+        display: block;
+        
+        margin: 0px auto ;
+        width: 53%;
+        padding: 2px 12px;
+        
+     }
+     .right{
+         position: absolute;
+         right: 34px;
+        top: 20px;
+        display: inline-block;
+        margin-top: 20px;
+        text-align: center;
+     }
+     .navbar{
+        display: inline-block;
+        margin-top: 20px;
+     }
+     .navbar li{
+        display: inline-block;
+        font-size: 15px;
+        margin :0 10px;
+     }
+     .left img{
+       width: 40px;
+       left: 55px;
+       display: block;
+       margin: 2px auto;
+       border-radius: 5px;
+       filter: invert(100%);
+       right: 10px;
+       padding-right: 90px;       
+     }
+   
+     .navbar li a{
+        color:  grey;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 34px 23px;
+     }
+     .navbar li a:hover, .navbar li a.active{
+        text-decoration: underline;
+        color: black;
+     }
+   .btn{
+        margin: 0px 9px;
+        padding: 5px 14px;
+        background-color: black;
+        color: white;
+        border: 2px solid grey;
+        font-size: 15px;
+        cursor: pointer;
+        border-radius: 5px;
+      }   
+     
+      .container{
+         background: url(img/Screenshot\ \(90\).png);
+         min-height: 600px;
+
+   /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0px 0px;
+            padding: 5px 14px;
+
+/* Needed to position the navbar */
+         
+      }
+      
+   .main-content {
+    padding: 10px;
+  }
+  
+  .reference-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    max-width: 1200px;
+    margin: 20px auto;
+    
+  }
+  @media(max-width:768px){
+   .container{
+      flex-direction: column;
+      align-items: flex-start;
+   }
+  }
+  
+  .reference-box {
+    width: 100%;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    text-align: center;
+    background-color: brown;
+    
+  }
+   .reference-box A:hover{
+      text-decoration: underline;
+        color: black;
+   }
+   .reference-box  a{
+      text-decoration: none;
+        color: grey;
+        font-weight: bolder;
+        font-size: larger;
+   }
+
+   .reference-box img {
+    max-width: 100%;
+    border-radius: 5px;
+  
+   }
+   /* Your existing CSS styles for .header, .navbar, and .container remain unchanged */
+
+/* Additional background image for the reference boxes */
+.reference-boxes::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1900px;
+  background-image: url(img/pexels-jakub-novacek-924824.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 9; /* Adjust the opacity to control the visibility of the image */
+  z-index: -1; /* Move the pseudo-element behind the reference boxes */
+  border-radius: 10px; /* Add a border radius if needed */
+}
+.reference-box .icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+/* Additional background image for the header */
+.header {
+  background-image: url("path/to/your/header_background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 380px; /* Adjust the height if needed */
+}
+
+
+/* Styles for the modal overlay */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 400px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+#signupModal {
+  display: none;
+}
+.about-us-section {
+            background-color: #f9f9f9;
+            padding: 30px;
+            text-align: center;
+            margin-top: 50px;
+            border-radius: 10px;
+        }
+
+        .about-us-section h2 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .about-us-section p {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Styles for the footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            widows: 1600px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1900px;
+            margin: 4px auto;
+        }
+
+        .footer-content p {
+            margin: 2px;
+        }
+
+        .footer-content nav ul {
+            list-style: none;
+            padding: 1px 2px;
+            margin: 2px;
+        }
+
+        .footer-content nav li {
+            display: block;
+            margin-right: 40px;
+        }
+
+        .footer-content nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-sponsors {
+            margin-top: 20px;
+        }
+
+        .footer-sponsors ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-sponsors li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .footer-sponsors a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+
+/* Rest of your existing CSS styles remain unchanged */
+
+
+/* Your existing styles for .main-content and .reference-boxes remain unchanged */
+
+/* The rest of your existing CSS styles continue below */
+
+   
+     
+</style>
+<body>
+    <header class="header">
+     
+     <div class="container">
+      <div class="left">
+        <img src="/img/Screenshot (89).jpg" alt="">
+      
+      </div>
+     
+     
+      <div class="mid">
+        <ul class="navbar">
+            <li><a href=" #" class="active">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href=" #">Contact</a></li>
+            <li><a href=" Q&A.html">Q&A</a></li>
+        </ul>
+     </div>
+     
+     
+     <div class="right">
+       
+       
+        <button onclick="openSignUpModal()" class="btn">Sign Up</button>
+
+        <button onclick="openLoginModal()" class="btn">Login</button>
+
+<!-- The modal overlay -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeLoginModal()">&times;</span>
+    <h2>Login</h2>
+    <form>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      
+      <input type="submit" value="Login" class="btn">
+    </form>
+  </div>
+</div>
+
+
+
+<div id="signupModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeSignUpModal()">&times;</span>
+    <h2>Sign Up</h2>
+    <form>
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      
+      <input type="submit" value="Sign Up" class="btn">
+    </form>
+  </div>
+</div>
+
+     </div>
+    
+     </div>
+
+    </header>
+    <main class="main-content">
+   
+
+
+      
+      <section class="reference-boxes">
+        <div class="reference-box" onclick="showDetails('java')">
+          <a href="java.html">JAVA</a>
+        </div>
+        <div class="reference-box" onclick="showDetails('python')">
+          <!-- Content and image for Python reference box -->
+          
+          <i class="icon fab fa-java"></i>
+          <a href="java.html">PYTHON</a>
+        </div>
+        <div class="reference-box" onclick="showDetails('java')">
+         <a href="java.html">C++</a>
+       </div>
+       <div class="reference-box" onclick="showDetails('java')">
+         <a href="java.html">C</a>
+       </div>
+       <div class="reference-box" onclick="showDetails('java')">
+         <a href="java.html">C#</a>
+       </div>
+       <div class="reference-box" onclick="showDetails('java')">
+         <a href="java.html">JAVASCRIPT</a>
+       </div>
+       <div class="reference-box" onclick="showDetails('java')">
+         <a href="java.html">HTML</a>
+       </div>
+       <div class="reference-box" onclick="showDetails('java')">
+         <a href="java.html">CSS</a>
+       </div>
+       <div class="reference-box" onclick="showDetails('java')">
+         <a href="java.html">PHP</a>
+       </div>
+       <div class="reference-box" onclick="showDetails('java')">
+         <a href="java.html">MACHINE LEARNING</a>
+       </div>
+       <div class="reference-box" onclick="showDetails('java')">
+         <a href="java.html">ARTIFICIAL INTELLIGENCE</a>
+       </div>
+       <div id="about-us" class="about-us-section">
+        <h2>About Us</h2>
+        <p>
+            We are a team of passionate developers who love building amazing websites and applications. Our mission is to make the web a better place through creative and innovative solutions.
+        </p>
+    </div>
+    <footer>
+      <div class="footer-content">
+          <p>&copy; 2023 cdnjs.</p>
+          <nav>
+              <ul>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Swag Store</a></li>
+                  <li><a href="#">Community Discussions</a></li>
+                  <li><a href="#">OpenCollective</a></li>
+                  <li><a href="#">Patreon</a></li>
+                  <li><a href="#">CDN Network Map</a></li>
+              </ul>
+          </nav>
+      </div>
+      <div class="footer-sponsors">
+          <p>Sponsored By:</p>
+          <ul>
+              <li><a href="#">Cloudflare</a></li>
+              <li><a href="#">Algolia</a></li>
+              <li><a href="#">DigitalOcean</a></li>
+              <li><a href="#">StatusPage</a></li>
+              <li><a href="#">Sentry</a></li>
+              <li><a href="#">UptimeRobot</a></li>
+          </ul>
+      </div>
+  </footer>
+  
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
